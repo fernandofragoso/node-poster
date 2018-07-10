@@ -28,7 +28,7 @@ let sendRequest = function(url, body) {
 			if (!error && response.statusCode === 200) {
 				console.log('Success: ' + body);
 			} else {
-				console.log('Error: ' + body);
+				console.log('Error: ' + error);
 			}
 		}
 	);
@@ -38,7 +38,7 @@ console.log('SENDING REQUESTS:');
 readFile(FILEPATH, function(data) {
 	JSON.parse(data).forEach(function(item, index) {
 		console.log(`Sending ${index+1}...`);
-		sendRequest(URL, [item]);
+		sendRequest(URL, JSON.stringify([item]));
 	});
 	console.log('Sent!');
 });
