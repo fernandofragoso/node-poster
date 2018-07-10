@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const URL = 'http://localhost:3333';
-const FILEPATH = path.join(__dirname, 'file.json');
+const FILEPATH = path.join(__dirname, '../file.json');
 
 let readFile = function(file, callback) {
 	fs.readFile(file, 'utf8', (err, data) => {
