@@ -28,7 +28,7 @@ let sendRequest = function(url, body) {
 			if (!error && response.statusCode === 200) {
 				console.log('Success: ' + body);
 			} else {
-				console.log('Error: ' + error);
+				console.log('Error: ' + body);
 			}
 		}
 	);
